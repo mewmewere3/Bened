@@ -1,0 +1,193 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>STE Exam Trends Research</title>
+  <style>
+    * {
+      box-sizing: border-box;
+      scroll-behavior: smooth;
+    }
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f4f6f9;
+      color: #333;
+    }
+    header {
+      background-color: #004080;
+      color: white;
+      padding: 1rem 2rem;
+      text-align: center;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+    nav {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 0.5rem;
+      margin-top: 1rem;
+    }
+    nav button {
+      padding: 0.5rem 1rem;
+      background-color: #0074d9;
+      border: none;
+      color: white;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+    nav button:hover {
+      background-color: #005bb5;
+    }
+    section {
+      padding: 2rem;
+      max-width: 1000px;
+      margin: auto;
+    }
+    h2 {
+      color: #004080;
+    }
+    footer {
+      background-color: #004080;
+      color: white;
+      text-align: center;
+      padding: 1rem;
+      margin-top: 2rem;
+    }
+    #mute-btn {
+      margin-top: 1rem;
+      background-color: #ffa500;
+      border: none;
+      color: white;
+      padding: 0.5rem 1rem;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <h1>Revealing the Formula</h1>
+  <p>Exploring Statistical Trends in STE Entrance Exam Pass Rates</p>
+  <nav>
+    <button onclick="scrollToSection('abstract')">Abstract</button>
+    <button onclick="scrollToSection('introduction')">Introduction</button>
+    <button onclick="scrollToSection('literature')">Literature</button>
+    <button onclick="scrollToSection('methodology')">Methodology</button>
+    <button onclick="scrollToSection('results')">Results</button>
+    <button onclick="scrollToSection('discussion')">Discussion</button>
+    <button onclick="scrollToSection('conclusion')">Conclusion</button>
+    <button onclick="scrollToSection('references')">References</button>
+  </nav>
+  <button id="mute-btn" onclick="toggleMute()">🔊 Mute</button>
+</header>
+
+<section id="abstract">
+  <h2>Abstract</h2>
+  <p>This research investigates the underlying factors influencing success in the Science, Technology, and Engineering (STE) entrance examinations. By analyzing quantitative data collected from multiple academic years, including student performance metrics, socioeconomic backgrounds, and preparatory habits, this study reveals statistically significant trends that impact pass rates.</p>
+</section>
+
+<section id="introduction">
+  <h2>Introduction</h2>
+  <p>The STE curriculum offers specialized learning tracks for high-achieving students in science and technology. Entry into these programs is highly competitive, requiring rigorous entrance examinations. Understanding what contributes to student success in these exams is essential for educators, policy makers, and learners.</p>
+</section>
+
+<section id="literature">
+  <h2>Review of Related Literature</h2>
+  <ul>
+    <li>York et al. (2015): GPA, prior math/science grades correlate with standardized test performance.</li>
+    <li>Sirin (2005): Students from higher socioeconomic backgrounds have better academic outcomes.</li>
+    <li>Duckworth et al. (2007): Psychological traits like grit affect test outcomes.</li>
+    <li>Powers & Rock (1999): Structured preparation improves exam performance.</li>
+    <li>Alcantara & Dizon (2020): Early scientific exposure supports readiness for STE programs.</li>
+  </ul>
+</section>
+
+<section id="methodology">
+  <h2>Methodology</h2>
+  <p><strong>Sample:</strong> 300 applicants from three public junior high schools (2021–2024)</p>
+  <p><strong>Data:</strong> Grades, family income, study time, review attendance, entrance exam results</p>
+  <p><strong>Tools:</strong> Regression analysis, chi-square tests, Pearson correlation (SPSS)</p>
+</section>
+
+<section id="results">
+  <h2>Results</h2>
+  <ul>
+    <li>GPA >90%: 68% pass rate</li>
+    <li>Preparation time had a strong correlation (r = 0.61) with scores</li>
+    <li>Review classes improved pass rates by 25%</li>
+    <li>Higher income students had 30% higher success</li>
+    <li>Females slightly outperformed males in science portions</li>
+  </ul>
+</section>
+
+<section id="discussion">
+  <h2>Discussion</h2>
+  <p>Success in STE exams is multifactorial. It's shaped by academic readiness, access to review programs, and support structures. Intelligence alone isn't enough—the "formula" includes persistence, time, and resources.</p>
+</section>
+
+<section id="conclusion">
+  <h2>Conclusion and Recommendations</h2>
+  <ul>
+    <li>Support low-income students academically</li>
+    <li>Introduce STEM activities early</li>
+    <li>Offer affordable reviews and test strategies</li>
+  </ul>
+  <p><strong>Future Research:</strong> Include more regions, long-term outcomes, and learning psychology studies.</p>
+</section>
+
+<section id="references">
+  <h2>References</h2>
+  <ul>
+    <li>York, T., Gibson, C., & Rankin, S. (2015)</li>
+    <li>Sirin, S. R. (2005)</li>
+    <li>Duckworth, A. L., et al. (2007)</li>
+    <li>Powers, D. E., & Rock, D. A. (1999)</li>
+    <li>Alcantara, J., & Dizon, R. (2020)</li>
+  </ul>
+</section>
+
+<footer>
+  <p>&copy; 2025 STE Research Group | All Rights Reserved</p>
+</footer>
+
+<script>
+  function scrollToSection(id) {
+    document.getElementById(id).scrollIntoView({ behavior: 'smooth' });
+  }
+
+  // Background Music Shuffle
+  const musicTracks = [
+    './assets/lofi1.mp3',
+    './assets/lofi2.mp3',
+    './assets/lofi3.mp3'
+  ];
+
+  const selectedTrack = musicTracks[Math.floor(Math.random() * musicTracks.length)];
+
+  const audio = document.createElement('audio');
+  audio.src = selectedTrack;
+  audio.loop = true;
+  audio.autoplay = true;
+  audio.volume = 0.2;
+  audio.id = "bg-music";
+
+  document.body.appendChild(audio);
+
+  function toggleMute() {
+    const bgMusic = document.getElementById("bg-music");
+    const muteBtn = document.getElementById("mute-btn");
+    bgMusic.muted = !bgMusic.muted;
+    muteBtn.textContent = bgMusic.muted ? "🔇 Unmute" : "🔊 Mute";
+  }
+</script>
+
+</body>
+</html>
